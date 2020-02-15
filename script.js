@@ -10,6 +10,7 @@ class D3Map {
     const { height, width } = document
       .getElementById("map")
       .getBoundingClientRect();
+
     const geojson = topojson.feature(topology, topology.objects["custom.geo"]);
     this.countries = geojson.features;
     this.projection = d3.geoAlbers();
@@ -20,6 +21,10 @@ class D3Map {
       ],
       geojson
     );
+
+    const { min, max } = getGdpPerCapitaRange(geojson.features);
+    this.min = min;
+    this.max = max;
   }
   drawCountries() {
     const path = d3.geoPath().projection(this.projection);
@@ -30,10 +35,15 @@ class D3Map {
       .enter()
       .append("path")
       .attr("d", path)
-      .attr("stroke", "white")
-      .attr("fill", "lightgray");
-
+      .attr("stroke", "white");
     return countryGroup;
+  }
+
+  colorCountries(countryGroup) {
+    const scale = getScale(this.min, this.max);
+    countryGroup.attr("fill", country => {
+      return scale(gdpPerCapita(country));
+    });
   }
 
   drawCapitals(capitals) {
@@ -70,8 +80,36 @@ Promise.all([
 ])
   .then(([topology, capitals]) => {
     const map = new D3Map(topology);
-    map.drawCountries();
+    const countryGroup = map.drawCountries();
+    map.colorCountries(countryGroup);
     map.drawCapitals(capitals);
   })
   // handler to catch any error when fetching data
   .catch(err => console.log("error fetching topojson:", err));
+
+function getScale(min, max) {
+  const scale = d3.scaleSequential(d3.interpolatePurples);
+  scale.domain([min, max]);
+  return scale;
+}
+
+function gdpPerCapita(country) {
+  return (country.properties.gdp_md_est * 1e6) / country.properties.pop_est;
+}
+
+function getGdpPerCapitaRange(countries) {
+  let min = Infinity;
+  let max = -Infinity;
+
+  countries.forEach(country => {
+    const gpc = gdpPerCapita(country);
+    if (gpc < min) {
+      min = gpc;
+    }
+    if (gpc > max) {
+      max = gpc;
+    }
+  });
+
+  return { min, max };
+}
