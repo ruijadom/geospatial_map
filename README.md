@@ -14,7 +14,7 @@ Define how geographical data is represent on a flat surface.
 
 **Choropleths**
 
-- Maps Areas are shaded,
+- Maps Areas are shaded
 - Color proportional to the value being measured
 - Visualization for quantitative and qualitative data
 
