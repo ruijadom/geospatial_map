@@ -3,6 +3,7 @@
 
 d3.json("custom.topo.json")
   .then(topology => {
+    console.log(topology);
     const geojson = topojson.feature(topology, topology.objects["custom.geo"]);
     const svg = d3
       .select("body")
@@ -13,7 +14,7 @@ d3.json("custom.topo.json")
     const { height, width } = document
       .getElementById("map")
       .getBoundingClientRect();
-    projection.fitExtent(
+    projection.rotate(-75).fitExtent(
       [
         [0, 0],
         [width, height]
