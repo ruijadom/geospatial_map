@@ -1,12 +1,16 @@
 # Geospatial Mapping with D3
 
-**GeoJSON** is a format for enconding geographical data (...) can represent cities, countries and roads.
+**GeoJSON**
+Is a format for enconding geographical data (...) can represent cities, countries and roads.
 
-**TopoJSON** is an extension of GeoJSON.
+**TopoJSON**
+Is an extension of GeoJSON.
 
-**D3** uses TopoJSON with the help of the client library.
+**D3**
+Uses TopoJSON with the help of the client library.
 
-**Projections** define how geographical data is represent on a flat surface.
+**Projections**
+Define how geographical data is represent on a flat surface.
 
 **Choropleths**
 
