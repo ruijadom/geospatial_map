@@ -10,9 +10,19 @@ d3.json("custom.topo.json")
       .attr("id", "map");
     const projection = d3.geoAlbers();
     const path = d3.geoPath().projection(projection);
+    const { height, width } = document
+      .getElementById("map")
+      .getBoundingClientRect();
+    projection.fitExtent(
+      [
+        [0, 0],
+        [width, height]
+      ],
+      geojson
+    );
 
     svg
-      .selelecAll("path")
+      .selectAll("path")
       .data(geojson.features)
       .enter()
       .append("path")
