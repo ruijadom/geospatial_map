@@ -2,7 +2,7 @@
 
 GeoJSON is a format for enconding geographical data
 
-GeoJson can represent cities, countries and roads
+GeoJSON can represent cities, countries and roads
 
 TopoJSON is an extension of GeoJSON
 
