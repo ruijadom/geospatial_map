@@ -37,8 +37,11 @@ class D3Map {
   }
 }
 
-d3.json("assets/data/custom.topo.json")
-  .then(topology => {
+Promise.all([
+  d3.json("assets/data/custom.topo.json"),
+  d3.csv("assets/data/capitals.csv")
+])
+  .then(([topology, capitals]) => {
     const map = new D3Map(topology);
     map.drawCountries();
   })
