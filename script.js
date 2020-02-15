@@ -37,7 +37,7 @@ class D3Map {
   }
 }
 
-d3.json("data/custom.topo.json")
+d3.json("assets/data/custom.topo.json")
   .then(topology => {
     const map = new D3Map(topology);
     map.drawCountries();
