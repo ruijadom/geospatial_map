@@ -35,6 +35,33 @@ class D3Map {
 
     return countryGroup;
   }
+
+  drawCapitals(capitals) {
+    const circleRadius = 5;
+    const textSize = 10;
+    const capitalGroup = this.svg.append("g");
+    capitalGroup
+      .selectAll("circle")
+      .data(capitals)
+      .enter()
+      .append("circle")
+      .attr("cx", city => this.projection([city.lng, city.lat])[0])
+      .attr("cy", city => this.projection([city.lng, city.lat])[1])
+      .attr("r", circleRadius + "px")
+      .attr("fill", "red");
+
+    capitalGroup
+      .selectAll("text")
+      .data(capitals)
+      .enter()
+      .append("text")
+      .attr("x", city => this.projection([city.lng, city.lat])[0])
+      .attr("y", city => this.projection([city.lng, city.lat])[1])
+      .attr("font-size", textSize + "px")
+      .attr("transform", `translate(${circleRadius}, ${textSize / 2})`)
+      .text(city => city.city);
+    return capitalGroup;
+  }
 }
 
 Promise.all([
@@ -44,6 +71,7 @@ Promise.all([
   .then(([topology, capitals]) => {
     const map = new D3Map(topology);
     map.drawCountries();
+    map.drawCapitals(capitals);
   })
   // handler to catch any error when fetching data
   .catch(err => console.log("error fetching topojson:", err));
