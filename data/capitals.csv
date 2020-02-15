@@ -1,0 +1,40 @@
+city,city_ascii,lat,lng,country,iso2,iso3,admin_name,capital,population,id
+Vilnius,Vilnius,54.6834,25.3166,Lithuania,LT,LTU,Vilniaus Miestas,primary,542366,1440887149
+Luxembourg,Luxembourg,49.6117,6.13,Luxembourg,LU,LUX,Luxembourg,primary,107260,1442262731
+Riga,Riga,56.95,24.1,Latvia,LV,LVA,Rīga,primary,742572,1428586192
+Chișinău,Chisinau,47.005,28.8577,Moldova,MD,MDA,Chişinău,primary,688134,1498011437
+Podgorica,Podgorica,42.466,19.2663,Montenegro,ME,MNE,Podgorica,primary,145850,1499454516
+Skopje,Skopje,42,21.4335,Macedonia,MK,MKD,,primary,494087,1807600615
+Amsterdam,Amsterdam,52.35,4.9166,Netherlands,NL,NLD,Noord-Holland,primary,1031000,1528355309
+The Hague,The Hague,52.08,4.27,Netherlands,NL,NLD,Zuid-Holland,primary,1406000,1528799905
+Oslo,Oslo,59.9167,10.75,Norway,NO,NOR,Oslo,primary,835000,1578324706
+Warsaw,Warsaw,52.25,21,Poland,PL,POL,Mazowieckie,primary,1707000,1616024847
+Lisbon,Lisbon,38.7227,-9.1449,Portugal,PT,PRT,Lisboa,primary,2812000,1620619017
+Bucharest,Bucharest,44.4334,26.0999,Romania,RO,ROU,Bucureşti,primary,1942000,1642414442
+Belgrade,Belgrade,44.8186,20.468,Serbia,RS,SRB,,primary,1099000,1688374696
+Stockholm,Stockholm,59.3508,18.0973,Sweden,SE,SWE,Stockholm,primary,1264000,1752425602
+Ljubljana,Ljubljana,46.0553,14.515,Slovenia,SI,SVN,Ljubljana,primary,314807,1705917455
+Bratislava,Bratislava,48.15,17.117,Slovakia,SK,SVK,Bratislavský,primary,423737,1703195001
+Kiev,Kiev,50.4334,30.5166,Ukraine,UA,UKR,"Kyyiv, Misto",primary,2709000,1804382913
+Tirana,Tirana,41.3275,19.8189,Albania,AL,ALB,Tiranë,primary,895350,1008162156
+Vienna,Vienna,48.2,16.3666,Austria,AT,AUT,Wien,primary,2400000,1040261752
+Sarajevo,Sarajevo,43.85,18.383,Bosnia And Herzegovina,BA,BIH,"Bosnia and Herzegovina, Federation of",primary,696731,1070966777
+Brussels,Brussels,50.8333,4.3333,Belgium,BE,BEL,Brussels-Capital Region,primary,1743000,1056469830
+Sofia,Sofia,42.6833,23.3167,Bulgaria,BG,BGR,Sofia-Grad,primary,1185000,1100762037
+Minsk,Minsk,53.9,27.5666,Belarus,BY,BLR,,primary,1805000,1112348503
+Bern,Bern,46.9167,7.467,Switzerland,CH,CHE,Bern,primary,275329,1756374318
+Prague,Prague,50.0833,14.466,Czechia,CZ,CZE,"Praha, Hlavní Město",primary,1162000,1203744823
+Berlin,Berlin,52.5218,13.4015,Germany,DE,DEU,Berlin,primary,3406000,1276451290
+København,Kobenhavn,55.6786,12.5635,Denmark,DK,DNK,Hovedstaden,primary,1085000,1208763942
+Tallinn,Tallinn,59.4339,24.728,Estonia,EE,EST,Harjumaa,primary,394024,1233260021
+Madrid,Madrid,40.4,-3.6834,Spain,ES,ESP,Madrid,primary,5567000,1724616994
+Helsinki,Helsinki,60.1756,24.9341,Finland,FI,FIN,Uusimaa,primary,1115000,1246177997
+Paris,Paris,48.8667,2.3333,France,FR,FRA,Île-de-France,primary,9904000,1250015082
+London,London,51.5,-0.1167,United Kingdom,GB,GBR,,primary,8567000,1826645935
+Athens,Athens,37.9833,23.7333,Greece,GR,GRC,Attikí,primary,3242000,1300715560
+Zagreb,Zagreb,45.8,16,Croatia,HR,HRV,"Zagreb, Grad",primary,722526,1191233290
+Budapest,Budapest,47.5,19.0833,Hungary,HU,HUN,Budapest,primary,1679000,1348611435
+Dublin,Dublin,53.3331,-6.2489,Ireland,IE,IRL,Dublin,primary,1059000,1372595407
+Reykjavík,Reykjavik,64.15,-21.95,Iceland,IS,ISL,Höfuðborgarsvæði,primary,166212,1352327190
+Rome,Rome,41.896,12.4833,Italy,IT,ITA,Lazio,primary,3339000,1380382862
+
